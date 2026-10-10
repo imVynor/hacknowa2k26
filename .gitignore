@@ -1,0 +1,44 @@
+# Dependency directories
+node_modules/
+*/node_modules/
+
+# Environment and secrets files (never commit API keys)
+.env
+.env.*
+!.env.example
+!*/.env.example
+server/.env
+server/.env.*
+client/.env
+client/.env.*
+demo-target/.env
+demo-target/.env.*
+
+# Build artifacts
+.next/
+*/.next/
+out/
+*/out/
+build/
+*/build/
+dist/
+*/dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files and scratch scripts
+scratch/
+*/scratch/
+scratch_*
+*.tmp
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.agents/

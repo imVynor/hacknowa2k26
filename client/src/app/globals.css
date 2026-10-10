@@ -1,0 +1,134 @@
+:root {
+  /* Surface Hierarchy (True Borderless Dark Theme) */
+  --bg-canvas: #090b0f;
+  --bg-surface: #10141d;
+  --bg-surface-elevated: #161c28;
+  --bg-surface-hover: #1c2433;
+  --bg-inset: #0c0f16;
+  --bg-input: #131722;
+  
+  /* Borders & Dividers — Pure Borderless Design */
+  --border-subtle: transparent;
+  --border-default: transparent;
+  --border-strong: transparent;
+  --border-focus: #3b82f6;
+  --border-accent: transparent;
+
+  /* Typography Colors */
+  --text-primary: #f3f4f6;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-disabled: #475569;
+
+  /* Semantic Security Status Tokens (Border-free soft tints) */
+  --status-pass: #10b981;
+  --status-pass-bg: rgba(16, 185, 129, 0.12);
+  --status-pass-border: transparent;
+
+  --status-fail: #ef4444;
+  --status-fail-bg: rgba(239, 68, 68, 0.12);
+  --status-fail-border: transparent;
+
+  --status-inconc: #f59e0b;
+  --status-inconc-bg: rgba(245, 158, 11, 0.12);
+  --status-inconc-border: transparent;
+
+  --status-error: #f43f5e;
+  --status-error-bg: rgba(244, 63, 94, 0.12);
+  --status-error-border: transparent;
+
+  --status-fallback: #d97706;
+  --status-fallback-bg: rgba(217, 119, 6, 0.12);
+  --status-fallback-border: transparent;
+
+  --status-info: #38bdf8;
+  --status-info-bg: rgba(56, 189, 248, 0.12);
+  --status-info-border: transparent;
+
+  /* Interactive Elements */
+  --interactive-primary: #2563eb;
+  --interactive-primary-hover: #1d4ed8;
+  --interactive-primary-focus: rgba(37, 99, 235, 0.35);
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Fonts */
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+}
+
+html {
+  height: 100%;
+  color-scheme: dark;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-primary);
+  background: var(--bg-canvas);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* Accessible focus ring style */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 1px;
+}
+
+/* Technical scrollbars for log boxes & tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-inset);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
